@@ -1,0 +1,41 @@
+.scrollup {
+    position: fixed;
+    bottom: 100px;
+    right: 80px;
+    font-size: 60px;
+    background-color: #3a7cec;
+    width: 60px;
+    height: 60px;
+    border-color: #3a7cec;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+
+}
+
+.visible {
+    opacity: 1;
+}
+
+.scrollup_hidden-visible {
+    position: fixed;
+    bottom: 100px;
+    right: 80px;
+    font-size: 60px;
+    background-color: #3a7cec;
+    width: 60px;
+    height: 60px;
+    border-color: #3a7cec;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+
+
+.scrollup_arrow {
+    color: white;
+    display: flex;
+    justify-content: center;
+}

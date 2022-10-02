@@ -1,0 +1,63 @@
+.loginform__container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.loginform__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginform__login {
+    margin-left: 50px;
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.loginform__password {
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+
+.loginform__warning {
+    font-size: 18px;
+    color: red;
+    margin-left: 100px;
+}
+
+.loginform__submit {
+    background: #2ba14b;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: #2ba14b;
+    font-size: 18px;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.loginform__question {
+    font-size: 24px;
+    font-weight: 400px;
+}
+
+.loginform__redirect {
+    background: blue;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: blue;
+    font-size: 18px;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 10px;
+}

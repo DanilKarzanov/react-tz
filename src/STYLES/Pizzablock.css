@@ -1,0 +1,88 @@
+.pizza-block {
+    width: 300px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pizza-block__image {
+    width: 280px;
+}
+
+.pizza-block__title {
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.pizza-block__selector {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.pizza-block__types {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 1;
+}
+
+.pizza-block__types li {
+    list-style-type: none;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.pizza-block__types li.active {
+    background: #3a7cec;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    cursor: auto;
+}
+
+.pizza-block__sizes {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 1;
+}
+
+.pizza-block__sizes li {
+    list-style-type: none;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.pizza-block__sizes li.active {
+    background: #3a7cec;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    cursor: auto;
+}
+
+.pizza-block__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pizza-block__price {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.pizza-button__add {
+    background: #2ba14b;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    border: #2ba14b;
+    font-size: 14px;
+    cursor: pointer;
+}

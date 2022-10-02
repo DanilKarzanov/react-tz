@@ -1,0 +1,50 @@
+.registerform__container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.registerform__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registerform__login {
+    margin-left: 50px;
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.registerform__password {
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.registerform__box {
+    margin-left: 50px;
+}
+
+.registerform__warning {
+    font-size: 18px;
+    color: red;
+    margin-left: 100px;
+}
+
+.registerform__submit {
+    background: blue;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: blue;
+    font-size: 18px;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
