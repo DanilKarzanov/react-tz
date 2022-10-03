@@ -14,16 +14,18 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist'
+import { formReducer } from "./formSlice";
 
 const persistConfig = {
   key: 'root',
   storage,
+  whitelist: ['cart']
 }
 
 const rootReducer = combineReducers({
     pizzas: pizzasReducer,
     cart: cartReducer,
-    
+    form: formReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
@@ -38,6 +40,5 @@ const store = configureStore({
         })
 })
 
-//const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 export const persistor = persistStore(store) 
 export default store

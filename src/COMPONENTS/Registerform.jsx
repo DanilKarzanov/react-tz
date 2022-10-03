@@ -16,15 +16,17 @@ const Registerform = () => {
     })
     const onSubmit = data => {
         axios.post("http://localhost:4000/auth/registration", {username: `${data.login}`, password: `${data.password}`}).then(() => console.log('success'))
-        reset()
+        reset()       // post выполняется, но форма не очищается?
     }
 
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
-
+    const margin = {
+        marginLeft: '500px'
+    }
 
     return (
-        <div className="registerform__container">
+        <div className="registerform__container" style={margin}>
             <form className='registerform__form' onSubmit={handleSubmit(onSubmit)}>
                 <label className="registerform__login">Логин
                     <input className="registerform__box" 
@@ -54,7 +56,7 @@ const Registerform = () => {
                         {errors?.password && <p>{errors.password.message}</p>}
                     </div>
                 </label>
-                <button className="registerform__submit">Зарегистрироваться</button>
+                <button className="registerform__submit" onClick={handleSubmit(onSubmit)}>Зарегистрироваться</button>
             </form>
         </div>
     )

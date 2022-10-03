@@ -1,8 +1,10 @@
 import React from "react"
 import "../STYLES/Deliveryform.css"
 import {useForm} from "react-hook-form"
-import Registerform from "./Registerform"
 import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from "react-redux";
+import { switchform } from "../REDUX/formSlice"
+import axios from "axios"
 
 const Deliveryform = () => {
     const {
@@ -18,17 +20,23 @@ const Deliveryform = () => {
     const navigate = useNavigate()
 
     const onSubmit = data => {
-        console.log(JSON.stringify(data))  //some post req
+        document.getElementById("form1").submit()
+        document.getElementById("form2").submit()
+        axios.post("http://localhost:4000/auth/registration", {username: `${data.login}`, password: `${data.password}`}).then(() => console.log('success'))
         reset()
-        navigate('/cart/success')
+        navigate('/cart/success')   // после этого сразу перекидывает на главную без нажатия кнопки?
     }
 
-    const [visibleRegister, setVisibleRegister] = React.useState(true)
+    const dispatch = useDispatch()
+    const condition = useSelector(state => state.form.condition)
+
+    const [email, setEmail] = React.useState('')
+    const [password, setPassword] = React.useState('')
     
     return (
         <div className="deliveryform__container">
             <h4 className="deliveryform__title">Укажите ваши данные</h4>
-            <form className="deliveryform__form" onSubmit={handleSubmit(onSubmit)}>
+            <form id='form1' className="deliveryform__form" onSubmit={handleSubmit(onSubmit)}>
                 <label className="deliveryform__firstname">Имя
                     <input className="deliveryform__box" {...register('firstname', {
                         required: "Обязательно для ввода",
@@ -68,12 +76,45 @@ const Deliveryform = () => {
                     </div>
                 </label>
                 <label className="deliveryform__offerregistration">Зарегистрироваться
-                    <input type="checkbox" id="checkbox" defaultChecked={true} onChange={e => setVisibleRegister(e.target.checked)}/>
+                    <input type="checkbox" id="checkbox" defaultChecked={true} onChange={() => dispatch(switchform())}/>
                 </label>
-                {visibleRegister && <Registerform/>}
-                <button className="deliveryform__order">Заказать</button>
                 
             </form>
+            {condition && 
+            <div className="registerform__container">
+            <form id='form2' className='registerform__form' onSubmit={handleSubmit(onSubmit)}>
+                <label className="registerform__login">Логин
+                    <input className="registerform__box" 
+                        {...register('login', {
+                            required: 'Поле обязательно!',
+                            minLength: {value: 5, message: 'Минимум 5 символов'},
+                            maxLength: {value: 20, message: 'Максимум 20 символов'},
+                            value: email,
+                            onChange: (e) => {setEmail(e.target.value)}
+                        })}
+                    />
+                    <div className="registerform__warning">
+                        {errors?.login && <p>{errors.login.message}</p>}
+                    </div>
+                </label>
+                <label className="registerform__password">Пароль
+                    <input className="registerform__box"
+                        {...register('password', {
+                            required: 'Поле обязательно!',
+                            minLength: {value: 5, message: 'Минимум 5 символов'},
+                            maxLength: {value: 20, message: 'Максимум 20 символов'},
+                            value: password,
+                            onChange: (e) => {setPassword(e.target.value)}
+                        })}
+                    />
+                    <div className="registerform__warning">
+                        {errors?.password && <p>{errors.password.message}</p>}
+                    </div>
+                </label>
+                
+            </form>
+        </div>}
+            <button type='submit' className="deliveryform__order" onClick={handleSubmit(onSubmit)}>Заказать</button>
         </div>
     )
 }

@@ -33,7 +33,6 @@ const Cart = () => {
 
     const handleOrderClick = () => {
         setVisibleForm(true)
-        console.log(visibleForm)
     }
 
     const getTotal = () => {

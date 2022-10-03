@@ -18,7 +18,7 @@ const Loginform = () => {
 
     const onSubmit = data => {
         axios.post("http://localhost:4000/auth/login", {username: `${data.login}`, password: `${data.password}`}).then(response => console.log(response.data))
-        .then(reset())
+        reset()  // не очищается 
     }
     
     const [email, setEmail] = React.useState('')
