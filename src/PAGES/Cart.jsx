@@ -1,10 +1,10 @@
 import React from "react"
-import Orderedpizza from "../COMPONENTS/Orderedpizza"
-import Deliveryform from "../COMPONENTS/Deliveryform"
-import "../STYLES/Cart.css";
+import Orderedpizza from "../components/Orderedpizza"
+import Deliveryform from "../components/Deliveryform"
+import "../styles/Cart.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom'
-import { clearCart } from "../REDUX/cartSlice";
+import { clearCart } from "../redux/cartSlice";
 
 
 const Cart = () => {
@@ -20,10 +20,6 @@ const Cart = () => {
 
     const dispatch = useDispatch()
     const cart = useSelector((state) => state.cart)
-
-    /*const handleClearClick = () => {
-        localStorage.clear()
-    }*/
 
     const handleClearClick = () => {
         dispatch(clearCart())

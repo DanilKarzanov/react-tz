@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
-import "../STYLES/Registerform.css"
+import "../styles/Registerform.css"
 
 const Registerform = () => {
     const {

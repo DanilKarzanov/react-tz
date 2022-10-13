@@ -16,4 +16,4 @@ export const formSlice = createSlice({
 
 export const { switchform } = formSlice.actions
 
-export const formReducer =  formSlice.reducer
+export const deliveryFormReducer =  formSlice.reducer

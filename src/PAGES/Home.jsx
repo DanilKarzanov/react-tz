@@ -1,11 +1,11 @@
 import React from 'react'
-import Pizzablock from '../COMPONENTS/Pizzablock'
+import Pizzablock from '../components/Pizzablock'
 import { Grid } from '@mui/material'
 import { Container } from '@mui/system'
-import '../STYLES/Home.css'
+import '../styles/Home.css'
 
 
-const Home = ({ blocks }) =>  {
+const Home = ({ items }) =>  {
   window.onscroll = () => {
     if (window.scrollY > 300) {
       document.querySelector('.scrollup').classList.add('visible')
@@ -20,8 +20,8 @@ const Home = ({ blocks }) =>  {
     <div>
       <Container>
         <Grid container>
-          {blocks && blocks.map(block => (
-            <Grid item key={block.id} md={4} sm={6} xs={12}><Pizzablock key={block.id} {...block} blocks={blocks}/></Grid>
+          {items && items.map(item => (
+            <Grid item key={item.id} md={4} sm={6} xs={12}><Pizzablock key={item.id} {...item} items={items}/></Grid>
           ))}
         </Grid>
       </Container>

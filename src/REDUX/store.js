@@ -14,7 +14,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist'
-import { formReducer } from "./formSlice";
+import { deliveryFormReducer } from "./deliveryFormSlice";
 import { optionReducer } from "./optionsSlice";
 
 const persistConfig = {
@@ -26,7 +26,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
     pizzas: pizzasReducer,
     cart: cartReducer,
-    form: formReducer,
+    form: deliveryFormReducer,
     options: optionReducer
 })
 

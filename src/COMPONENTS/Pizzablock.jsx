@@ -1,27 +1,21 @@
 
 import React, { useState } from "react";
-import "../STYLES/Pizzablock.css"
+import "../styles/Pizzablock.css"
 import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../REDUX/cartSlice";
-import { chosenSize, chosenType } from "../REDUX/optionsSlice";
+import { addToCart } from "../redux/cartSlice";
+import { chosenSize, chosenType } from "../redux/optionsSlice";
+import { typeNames, availableSizes } from "../constants/pizzas";
 
-const Pizzablock = ({ name, imageUrl, price, id, blocks, description }) => {
+const Pizzablock = ({ name, imageUrl, price, id, description }) => {
     const dispatch = useDispatch()
-    const typeNames = ['традиционное', 'тонкое']
-    const availableSizes = [25, 30, 35]
     const [activeType, setActiveType] = useState(0)
     const [activeSize, setActiveSize] = useState(0)
 
-    /*const handleAddClick = () => {
-        localStorage.setItem(JSON.stringify(id), JSON.stringify(blocks[id]))
-        console.log(blocks[id])
-    }*/
-    
     const handleAddClick = () => {
-        dispatch(addToCart({name, imageUrl, price, id}))
+        dispatch(addToCart({ name, imageUrl, price, id }))
     }
-
+    
     const state = useSelector(state => state)
     
     return (

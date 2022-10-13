@@ -1,12 +1,12 @@
 
 const initialState = {
-    blocks: []
+    items: []
 }
 
 export const pizzasReducer = (state = initialState, action) => {
     switch (action.type) {
         case "SET_PIZZAS":
-            return {...state, blocks: action.payload}
+            return {...state, items: action.payload}
         default:
             return state
     }

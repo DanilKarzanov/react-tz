@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import '../STYLES/Loginform.css'
+import '../styles/Loginform.css'
 import {useForm} from "react-hook-form"
 import { Link } from 'react-router-dom'
 
