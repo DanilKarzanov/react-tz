@@ -15,17 +15,19 @@ import {
   REGISTER,
 } from 'redux-persist'
 import { formReducer } from "./formSlice";
+import { optionReducer } from "./optionsSlice";
 
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['cart']
+  whitelist: ['cart', 'options']
 }
 
 const rootReducer = combineReducers({
     pizzas: pizzasReducer,
     cart: cartReducer,
-    form: formReducer
+    form: formReducer,
+    options: optionReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

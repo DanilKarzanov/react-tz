@@ -35,6 +35,7 @@ const cartSlice = createSlice({
         clearCart: state => {
             state.cart = []
         },
+
     }
 })
 
@@ -44,5 +45,5 @@ export const {
     incrementAmount,
     decrementAmount,
     removeItem,
-    clearCart
+    clearCart,
 } = cartSlice.actions

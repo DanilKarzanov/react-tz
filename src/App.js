@@ -10,7 +10,7 @@ import  axios from "axios";
 import { pizzasActionCreator } from "./REDUX/pizzasActionCreator";
 import Registerform from './COMPONENTS/Registerform';
 import Success from './COMPONENTS/Success'
-
+import { setPizzas } from './REDUX/optionsSlice';
 const App = () => {
 
   const dispatch = useDispatch()
@@ -18,9 +18,12 @@ const App = () => {
 
   React.useEffect(() => {
     axios.get("http://localhost:4000/auth/pizzas").then(({ data }) => {
-      dispatch(pizzasActionCreator(data[0].pizzas))
+      dispatch(pizzasActionCreator(data[0].pizzas));
+      dispatch(setPizzas(data[0].pizzas))
     })
   }, [])
+  //dispatch(setPizzas(data[0].pizzas))
+
 
   const pizza_array = []
   for (let i=0; i<localStorage.length; i++) {

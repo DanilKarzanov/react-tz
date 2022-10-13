@@ -46,7 +46,7 @@ const Cart = () => {
         <div className="cart__container">
             <h1 className="cart__title">Корзина</h1>
             <div className="cart__orderedlist">
-                {cart.cart.map((item) =>(                 /*cart.cart????*/
+                {cart.cart.map((item) =>(                 
                     <Orderedpizza key={item.id} {...item}/>
                 ))}
                 
