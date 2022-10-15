@@ -1,0 +1,1 @@
+export const filterCategories = ['Все', 'Без мяса', 'Классические']

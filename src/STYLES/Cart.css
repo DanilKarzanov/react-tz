@@ -34,6 +34,11 @@
     cursor: pointer;
 }
 
+.cart__clear:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
 .cart__order {
     background: #2ba14b;
     color: white;
@@ -44,6 +49,11 @@
     cursor: pointer;
 }
 
+.cart__order:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
 .cart__return {
     background: blue;
     color: white;
@@ -52,4 +62,9 @@
     border: blue;
     font-size: 18px;
     cursor: pointer;
+}
+
+.cart__return {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }

@@ -22,8 +22,7 @@ const Deliveryform = () => {
     const onSubmit = data => {
         document.getElementById("form1").submit()
         document.getElementById("form2").submit()
-        axios.post("http://localhost:4000/auth/registration", {username: `${data.login}`, password: `${data.password}`}).then(() => console.log('success'))
-        reset()
+        axios.post("http://localhost:4000/auth/registration", {username: `${data.login}`, password: `${data.password}`}).then(() =>  console.log('success'))
         navigate('/cart/success')   // после этого сразу перекидывает на главную без нажатия кнопки?
     }
 

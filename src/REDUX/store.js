@@ -16,6 +16,8 @@ import {
 } from 'redux-persist'
 import { deliveryFormReducer } from "./deliveryFormSlice";
 import { optionReducer } from "./optionsSlice";
+import { searchReducer } from "./pizzasSearchSlice";
+import { filterReducer } from "./pizzasFilterSlice";
 
 const persistConfig = {
   key: 'root',
@@ -27,7 +29,9 @@ const rootReducer = combineReducers({
     pizzas: pizzasReducer,
     cart: cartReducer,
     form: deliveryFormReducer,
-    options: optionReducer
+    options: optionReducer,
+    searchvalue: searchReducer,
+    activeCategory: filterReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

@@ -3,7 +3,7 @@ import "../styles/Orderedpizza.css"
 import { useDispatch, useSelector } from "react-redux";
 import { incrementAmount, decrementAmount, removeItem } from "../redux/cartSlice";
 
-const Orderedpizza = ({name, imageUrl, price, id, amount=0, type='Традиционное', size=25}) => {
+const Orderedpizza = ({name, imageUrl, price, id, amount=0}) => {
     const dispatch = useDispatch()
     const handleIncrement = () => {
         dispatch(incrementAmount(id))

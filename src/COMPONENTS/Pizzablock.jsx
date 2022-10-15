@@ -11,7 +11,7 @@ const Pizzablock = ({ name, imageUrl, price, id, description }) => {
     const dispatch = useDispatch()
     const [activeType, setActiveType] = useState(0)
     const [activeSize, setActiveSize] = useState(0)
-
+    
     const handleAddClick = () => {
         dispatch(addToCart({ name, imageUrl, price, id }))
     }
