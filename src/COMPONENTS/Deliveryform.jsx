@@ -1,9 +1,9 @@
 import React from "react"
-import "../styles/Deliveryform.css"
+import "../STYLES/Deliveryform.css"
 import {useForm} from "react-hook-form"
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from "react-redux";
-import { switchform } from "../redux/deliveryFormSlice"
+import { switchform } from "../REDUX/deliveryFormSlice"
 import axios from "axios"
 
 const Deliveryform = () => {

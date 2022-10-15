@@ -1,6 +1,6 @@
 import React from "react";
-import '../styles/Search.css'
-import { setSearchValue } from "../redux/pizzasSearchSlice";
+import '../STYLES/Search.css'
+import { setSearchValue } from "../REDUX/pizzasSearchSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 export const Search = () => {

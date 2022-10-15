@@ -1,10 +1,10 @@
 
 import React, { useState } from "react";
-import "../styles/Pizzablock.css"
+import "../STYLES/Pizzablock.css"
 import classNames from "classnames";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../redux/cartSlice";
-import { chosenSize, chosenType } from "../redux/optionsSlice";
+import { addToCart } from "../REDUX/cartSlice";
+import { chosenSize, chosenType } from "../REDUX/optionsSlice";
 import { typeNames, availableSizes } from "../constants/pizzas";
 
 const Pizzablock = ({ name, imageUrl, price, id, description }) => {

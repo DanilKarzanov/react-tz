@@ -1,7 +1,7 @@
 import React from "react"
-import "../styles/Orderedpizza.css"
+import "../STYLES/Orderedpizza.css"
 import { useDispatch, useSelector } from "react-redux";
-import { incrementAmount, decrementAmount, removeItem } from "../redux/cartSlice";
+import { incrementAmount, decrementAmount, removeItem } from "../REDUX/cartSlice";
 
 const Orderedpizza = ({name, imageUrl, price, id, amount=0}) => {
     const dispatch = useDispatch()

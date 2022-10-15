@@ -1,10 +1,10 @@
 import React from "react"
-import Orderedpizza from "../components/Orderedpizza"
-import Deliveryform from "../components/Deliveryform"
-import "../styles/Cart.css";
+import Orderedpizza from "../COMPONENTS/Orderedpizza"
+import Deliveryform from "../COMPONENTS/Deliveryform"
+import "../STYLES/Cart.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom'
-import { clearCart } from "../redux/cartSlice";
+import { clearCart } from "../REDUX/cartSlice";
 
 
 const Cart = () => {

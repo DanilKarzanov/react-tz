@@ -1,9 +1,9 @@
 import React from "react"
 import classNames from "classnames"
 import { useSelector, useDispatch } from "react-redux"
-import { setActiveCategory } from "../redux/pizzasFilterSlice"
+import { setActiveCategory } from "../REDUX/pizzasFilterSlice"
 import { filterCategories } from "../constants/filter.js"
-import "../styles/Filter.css"
+import "../STYLES/Filter.css"
 
 export const Filter = () => {
     const dispatch = useDispatch()

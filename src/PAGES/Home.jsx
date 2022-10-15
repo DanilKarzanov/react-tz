@@ -1,11 +1,11 @@
 import React from 'react'
-import Pizzablock from '../components/Pizzablock'
-import { Search } from '../components/Search'
+import Pizzablock from '../COMPONENTS/Pizzablock'
+import { Search } from '../COMPONENTS/Search'
 import { Grid } from '@mui/material'
 import { Container } from '@mui/system'
-import '../styles/Home.css'
+import '../STYLES/Home.css'
 import { useSelector } from 'react-redux'
-import { Filter } from '../components/Filter'
+import { Filter } from '../COMPONENTS/Filter'
 
 const Home = ({ items }) =>  {
   window.onscroll = () => {
