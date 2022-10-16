@@ -5,6 +5,7 @@ import "../styles/Cart.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom'
 import { clearCart } from "../redux/cartSlice";
+import { getTotal } from "../utils/getTotal";
 
 
 
@@ -32,12 +33,6 @@ const Cart = () => {
         setVisibleForm(true)
     }
 
-    const getTotal = () => {
-        let sum = 0
-        cart.cart.forEach(item => sum += item.price*item.amount)
-        return sum
-    }
-
     return (
         <div className="cart__container">
             <h1 className="cart__title">Корзина</h1>
@@ -48,7 +43,7 @@ const Cart = () => {
                 
             </div>
             <div className="cart__pricesummary">
-                <h4>Итого: {getTotal()}</h4>
+                <h4>Итого: {getTotal(cart)}</h4>
             </div>
             <div className="cart__bottom">
                 <button onClick={handleClearClick} className="cart__clear">Очистить</button>
