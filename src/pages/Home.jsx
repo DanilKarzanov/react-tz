@@ -56,7 +56,7 @@ const Home = ({ items }) =>  {
               return false
             }
           }).map(item => (
-            <Grid item key={item.id} md={4} sm={6} xs={12}><Pizzablock key={item.id} {...item}/></Grid>
+            <Grid item key={item.id} md={4} sm={6} xs={12}><Pizzablock key={item.id} item={item} {...item}/></Grid>
           ))}
         </Grid>
       </Container>

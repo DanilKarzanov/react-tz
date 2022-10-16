@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { clearCart } from "../redux/cartSlice";
 
 
+
 const Cart = () => {
     window.onscroll = () => {
         if (window.scrollY > 300) {
@@ -37,7 +38,6 @@ const Cart = () => {
         return sum
     }
 
-    
     return (
         <div className="cart__container">
             <h1 className="cart__title">Корзина</h1>
